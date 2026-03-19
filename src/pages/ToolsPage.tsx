@@ -23,23 +23,23 @@ const tools = [
 
 export default function ToolsPage() {
   return (
-    <div className="container py-10 max-w-4xl space-y-8">
+    <div className="container py-12 max-w-4xl space-y-10">
       <div>
-        <h1 className="text-3xl font-display font-bold">All Tools</h1>
-        <p className="text-muted-foreground mt-1">Choose a tool to get started.</p>
+        <p className="text-sm font-medium tracking-widest uppercase text-primary mb-2">All Tools</p>
+        <h1 className="text-3xl md:text-4xl font-display">Choose a tool to get started</h1>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {tools.map(tool => (
           <Link
             key={tool.path}
             to={tool.path}
-            className="group rounded-xl border border-border bg-card p-6 shadow-card hover:shadow-card-hover transition-all hover:-translate-y-0.5"
+            className="group rounded-2xl border border-border bg-card p-6 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1"
           >
-            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+            <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors">
               <tool.icon className="w-5 h-5 text-primary" />
             </div>
-            <h3 className="font-display font-semibold">{tool.title}</h3>
-            <p className="text-sm text-muted-foreground mt-1">{tool.desc}</p>
+            <h3 className="font-semibold text-foreground">{tool.title}</h3>
+            <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">{tool.desc}</p>
           </Link>
         ))}
       </div>
