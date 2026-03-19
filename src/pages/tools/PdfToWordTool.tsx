@@ -79,8 +79,7 @@ export default function PdfToWordTool() {
         sections: [{ children }],
       });
 
-      const buffer = await Packer.toBuffer(doc);
-      const blob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
+      const blob = await Packer.toBlob(doc);
       saveAs(blob, file.name.replace(/\.pdf$/i, '.docx'));
       setDone(true);
       setProgress('');
