@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import {
   Merge, SplitSquareVertical, Minimize2, RotateCw,
-  FileOutput, Image, ImagePlus, Droplets, FileText
+  FileOutput, Image, ImagePlus, Droplets, FileText,
+  FileSpreadsheet, FileType, FileDown, Table2
 } from 'lucide-react';
 
 const tools = [
@@ -14,6 +15,10 @@ const tools = [
   { icon: ImagePlus, title: 'Images to PDF', desc: 'Combine images into a single PDF document.', path: '/tools/images-to-pdf' },
   { icon: Droplets, title: 'Watermark', desc: 'Add text watermark to every page.', path: '/tools/watermark' },
   { icon: FileText, title: 'Edit Metadata', desc: 'Edit title, author, subject, and keywords.', path: '/tools/metadata' },
+  { icon: FileSpreadsheet, title: 'Excel to PDF', desc: 'Convert spreadsheets to PDF with tables.', path: '/tools/excel-to-pdf' },
+  { icon: FileType, title: 'Word to PDF', desc: 'Convert Word documents to PDF format.', path: '/tools/word-to-pdf' },
+  { icon: FileDown, title: 'PDF to Word', desc: 'Convert PDF to editable Word documents.', path: '/tools/pdf-to-word' },
+  { icon: Table2, title: 'PDF to Excel', desc: 'Extract tables from PDF into spreadsheets.', path: '/tools/pdf-to-excel' },
 ];
 
 export default function ToolsPage() {
