@@ -1,10 +1,20 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Index from "./pages/Index.tsx";
-import NotFound from "./pages/NotFound.tsx";
+import Layout from "@/components/Layout";
+import HomePage from "@/pages/HomePage";
+import ToolsPage from "@/pages/ToolsPage";
+import MergeTool from "@/pages/tools/MergeTool";
+import SplitTool from "@/pages/tools/SplitTool";
+import CompressTool from "@/pages/tools/CompressTool";
+import RotateReorderTool from "@/pages/tools/RotateReorderTool";
+import ExtractTool from "@/pages/tools/ExtractTool";
+import PdfToImagesTool from "@/pages/tools/PdfToImagesTool";
+import ImagesToPdfTool from "@/pages/tools/ImagesToPdfTool";
+import WatermarkTool from "@/pages/tools/WatermarkTool";
+import MetadataTool from "@/pages/tools/MetadataTool";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
@@ -12,13 +22,23 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
-      <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/tools" element={<ToolsPage />} />
+            <Route path="/tools/merge" element={<MergeTool />} />
+            <Route path="/tools/split" element={<SplitTool />} />
+            <Route path="/tools/compress" element={<CompressTool />} />
+            <Route path="/tools/rotate-reorder" element={<RotateReorderTool />} />
+            <Route path="/tools/extract" element={<ExtractTool />} />
+            <Route path="/tools/pdf-to-images" element={<PdfToImagesTool />} />
+            <Route path="/tools/images-to-pdf" element={<ImagesToPdfTool />} />
+            <Route path="/tools/watermark" element={<WatermarkTool />} />
+            <Route path="/tools/metadata" element={<MetadataTool />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
