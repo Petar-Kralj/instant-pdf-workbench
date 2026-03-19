@@ -146,7 +146,7 @@ export async function getPageCount(file: File): Promise<number> {
 }
 
 export function downloadPdf(data: Uint8Array, filename: string) {
-  const blob = new Blob([data.buffer], { type: 'application/pdf' });
+  const blob = new Blob([data as unknown as ArrayBuffer], { type: 'application/pdf' });
   saveAs(blob, filename);
 }
 
