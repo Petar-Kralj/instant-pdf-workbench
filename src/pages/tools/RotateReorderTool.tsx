@@ -56,7 +56,7 @@ export default function RotateReorderTool() {
       let result: Uint8Array;
       // First reorder, then rotate
       const reordered = await reorderPages(file, order);
-      const tempFile = new File([reordered], file.name, { type: 'application/pdf' });
+      const tempFile = new File([reordered.buffer as ArrayBuffer], file.name, { type: 'application/pdf' });
       
       // Map rotations to new indices
       const newRotations = new Map<number, number>();
