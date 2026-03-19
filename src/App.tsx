@@ -14,6 +14,10 @@ import PdfToImagesTool from "@/pages/tools/PdfToImagesTool";
 import ImagesToPdfTool from "@/pages/tools/ImagesToPdfTool";
 import WatermarkTool from "@/pages/tools/WatermarkTool";
 import MetadataTool from "@/pages/tools/MetadataTool";
+import ExcelToPdfTool from "@/pages/tools/ExcelToPdfTool";
+import WordToPdfTool from "@/pages/tools/WordToPdfTool";
+import PdfToWordTool from "@/pages/tools/PdfToWordTool";
+import PdfToExcelTool from "@/pages/tools/PdfToExcelTool";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +40,10 @@ const App = () => (
             <Route path="/tools/images-to-pdf" element={<ImagesToPdfTool />} />
             <Route path="/tools/watermark" element={<WatermarkTool />} />
             <Route path="/tools/metadata" element={<MetadataTool />} />
+            <Route path="/tools/excel-to-pdf" element={<ExcelToPdfTool />} />
+            <Route path="/tools/word-to-pdf" element={<WordToPdfTool />} />
+            <Route path="/tools/pdf-to-word" element={<PdfToWordTool />} />
+            <Route path="/tools/pdf-to-excel" element={<PdfToExcelTool />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
