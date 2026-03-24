@@ -54,7 +54,7 @@ export default function HomePage() {
           Client-Side PDF Tools
         </p>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-display leading-[1.2] mb-5 text-foreground">
-          Hello, we are LocalPDF!
+          Hello, we are Fonatica!
         </h1>
         <p className="text-base text-muted-foreground max-w-md mx-auto leading-relaxed">
           We build powerful PDF tools that run entirely in your browser. No uploads, no login, completely free.

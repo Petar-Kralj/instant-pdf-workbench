@@ -24,7 +24,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <div className="w-7 h-7 rounded-md bg-foreground flex items-center justify-center">
                 <FileText className="w-3.5 h-3.5 text-primary-foreground" />
               </div>
-              LocalPDF
+              Fonatica
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-muted-foreground" />
             <span className="text-muted-foreground">
